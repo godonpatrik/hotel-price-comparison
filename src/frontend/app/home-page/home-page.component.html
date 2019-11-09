@@ -1,0 +1,16 @@
+<div class="rates" *ngIf="rates">
+  Today is {{day}} <br>
+  {{ time | date: 'hh:mm:ss a' }} <br>
+  {{rates['base']}} {{rates['rates']['HUF']}} HUF
+</div>
+<div class="container">
+  <span>
+    <h2>Welcome!</h2>
+  </span>
+  <span *ngIf="isLoggedIn">
+    <p>You can find the best hotels for your preferences.</p>
+  </span>
+  <span *ngIf="!isLoggedIn">
+    <p>Please log in!</p>
+  </span>
+</div>

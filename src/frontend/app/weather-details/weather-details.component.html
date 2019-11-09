@@ -1,0 +1,29 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div fxLayout="column" fxLayoutGap="32px" class="contain" *ngIf="forecastData">
+  <h2 align="center" *ngIf="city">Weather forecast for {{city}}</h2>
+  <mat-card class="tiles" *ngFor="let data of forecastData; index as i">
+    <mat-card-content fxLayout="row" fxLayoutAlign="center">
+      <div fxLayout="row" fxLayout.xs="column">
+        <span class="spanPadding">{{days[i]}} {{toReadableDate(data['valid_date'])}}</span>
+        <span class="spanPadding">Maximum temperature: {{data['max_temp']}}°C</span>
+        <span class="spanPadding">Minimum temperature: {{data['min_temp']}}°C</span>
+        <span class="spanPadding"><img src="https://www.weatherbit.io/static/img/icons/{{data['weather']['icon']}}.png"
+                                       width="50%"></span>
+        <span class="spanPadding">Max wind: {{convertToKmh(data['wind_spd'])}} Km/h</span>
+        <span class="spanPadding">Precipitation: {{roundValue(data['precip'])}} mm</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="contain">
+  <button class="showHideChartButton" *ngIf="!showChartBoolean" mat-flat-button type="button"
+          (click)="showChart()">Show weather chart
+  </button>
+  <button class="showHideChartButton" *ngIf="showChartBoolean" mat-flat-button color="primary"
+          type="button" (click)="showChart()">Hide weather chart
+  </button>
+</div>
+
+<app-chart *ngIf="showChartBoolean" [dates]="dates" [tempMax]="tempMax" [tempMin]="tempMin"></app-chart>

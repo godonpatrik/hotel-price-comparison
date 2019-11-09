@@ -1,0 +1,31 @@
+<div class="container" *ngIf="!showHotelDetails">
+  <mat-card class="card">
+    <form [formGroup]="hotelForm" (ngSubmit)="onSubmit()">
+      <mat-card-title class="cardTitle">Hotel Search</mat-card-title>
+      <mat-form-field>
+        <input matInput placeholder="Location" formControlName="location">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [matDatepicker]="startDatePicker" placeholder="Choose start date" [min]="todayDate" formControlName="startDate">
+        <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #startDatePicker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [matDatepicker]="endDatePicker" placeholder="Choose end date" [min]="minEndDate" formControlName="endDate">
+        <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #endDatePicker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Number of people" type="number" formControlName="peopleNum">
+      </mat-form-field>
+      <button class="loginRegisterButton" mat-flat-button type="submit" color="primary" [disabled]="!hotelForm.valid">Find hotels</button>
+    </form>
+  </mat-card>
+</div>
+
+<app-hotel-details *ngIf="showHotelDetails" [locationInput]="locationOutput" [startDateInput]="startDateOutput"
+                   [endDateInput]="endDateOutput" [peopleNumInput]="peopleNumOutput"></app-hotel-details>
+
+<div *ngIf="showHotelDetails" class="backButtonContainer">
+  <button class="backButton" mat-flat-button color="primary" type="button" (click)="hideHotelDetails()">Back to form</button>
+</div>

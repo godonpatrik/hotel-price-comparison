@@ -1,0 +1,30 @@
+.contain {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tile {
+  margin: 8px;
+  min-width: 350px;
+  display: flex;
+  justify-content: left;
+}
+
+.pictureContainer .listContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.innerList {
+  padding-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px 0 8px 0;
+}

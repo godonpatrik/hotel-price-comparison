@@ -1,0 +1,21 @@
+.container {
+  display: block;
+}
+
+mat-table {
+  margin: 8px;
+}
+
+.backButtonContainer {
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+}
+
+.backButton {
+  width: 50%;
+}
+
+.mat-flat-button {
+  background-color: rgb(18, 109, 140);
+}

@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-image: url('images/background.jpg');
+  color: white;
+}
+
+.cardTitle {
+  justify-content: center;
+}
+
+/* Login end Register page styles start*/
+
+.mat-form-field {
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.loginRegisterButton {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 90vh;
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-width: 350px;
+}
+
+/* Login end Register page styles end*/

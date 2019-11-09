@@ -1,0 +1,34 @@
+<div class="container" *ngIf="!showHotelDetails">
+  <mat-table #searchesTable [dataSource]="searches" class="table">
+    <ng-container *ngFor="let attributeName of tableColumns.attributeNames; let i = index"
+                  [matColumnDef]="attributeName">
+      <mat-header-cell *matHeaderCellDef [fxFlex]="tableColumns.widths[i]">
+        {{tableColumns.labels[i]}}
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element" [fxFlex]="tableColumns.widths[i]">
+        <ng-container>
+          {{element[attributeName]}}
+        </ng-container>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef fxFlex="10"></mat-header-cell>
+      <mat-cell *matCellDef="let element" fxFlex="10">
+        <button mat-mini-fab color="accent" (click)="showHotels(element)">
+          <mat-icon class="material-icons mat-18">info</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="tableColumns.attributeNames.concat('buttons')"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: tableColumns.attributeNames.concat('buttons')"></mat-row>
+  </mat-table>
+</div>
+
+<app-hotel-details *ngIf="showHotelDetails" [locationInput]="locationOutput" [startDateInput]="startDateOutput"
+                   [endDateInput]="endDateOutput" [peopleNumInput]="peopleNumOutput"></app-hotel-details>
+
+<div *ngIf="showHotelDetails" class="backButtonContainer">
+  <button class="backButton" mat-flat-button color="primary" type="button" (click)="hideHotelDetails()">Back to my searches</button>
+</div>

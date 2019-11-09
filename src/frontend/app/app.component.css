@@ -1,0 +1,28 @@
+.floatLeft {
+  float: left;
+}
+
+.mat-toolbar {
+  color: white;
+  display: flex;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1920px) {
+  .mobile {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .desktop {
+    visibility: hidden;
+  }
+
+  .mobile {
+    visibility: visible;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

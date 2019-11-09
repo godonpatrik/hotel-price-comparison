@@ -1,0 +1,29 @@
+<div *ngIf="!showSelectedPlace">
+  <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Loading...</p>
+  </ngx-spinner>
+  <div *ngIf="places">
+    <div>
+      <h2 align="center">Recommended places in {{places['geocode']['displayString']}}</h2>
+    </div>
+    <div class="cardsContainer">
+      <mat-card class="tiles" *ngFor="let venue of places['groups'][0]['items']">
+        <mat-card-content>
+          <div class="detailsContainer">
+            <span class="spanPadding"><b>{{venue['venue']['name']}}</b></span>
+            <span class="spanPadding">{{venue['venue']['categories'][0]['name']}}</span>
+          </div>
+          <button class="infoIcon" mat-mini-fab color="primary" (click)="showVenue(venue)">
+            <mat-icon class="material-icons mat-18">info</mat-icon>
+          </button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<app-selected-place *ngIf="showSelectedPlace" [selectedPlaceId]="selectedPlaceId"></app-selected-place>
+
+<div *ngIf="showSelectedPlace" class="backButtonContainer">
+  <button class="backButton" mat-flat-button color="primary" type="button" (click)="hideSelectedPlace()">Show all places</button>
+</div>

@@ -1,0 +1,18 @@
+.container {
+  text-align: center;
+  width: 100%;
+  color: white;
+  display: inline-block;
+}
+
+.rates {
+  display: flex;
+  float: right;
+  padding: 8px;
+}
+
+.date {
+  display: flex;
+  float: left;
+  padding: 8px;
+}

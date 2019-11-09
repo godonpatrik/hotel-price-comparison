@@ -1,0 +1,28 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div *ngIf="selectedPlaceData">
+  <h2 align="center">{{selectedPlaceData['name']}}</h2>
+</div>
+<div *ngIf="selectedPlaceData" class="contain">
+  <mat-card class="tile">
+    <mat-card-content>
+      <div class="selectedContainer" fxLayout="row" fxLayout.xs="column">
+        <div *ngIf="selectedPlaceData['bestPhoto']" class="pictureContainer">
+          <img src="{{selectedPlaceData['bestPhoto']['prefix']}}300x500{{selectedPlaceData['bestPhoto']['suffix']}}">
+        </div>
+        <div class="descContainer">
+          <ul>
+            <li><b>Name:</b>{{selectedPlaceData['name']}}</li>
+            <li *ngIf="selectedPlaceData['rating']"><b>Rating:</b>{{selectedPlaceData['rating']}}</li>
+            <li
+              *ngIf="selectedPlaceData['tips']['groups'][0]['items'][0]"><b>Tip:</b>{{selectedPlaceData['tips']['groups'][0]['items'][0]['text']}}</li>
+            <li><b>Address:</b>{{selectedPlaceData['location']['formattedAddress']}}</li>
+            <li><b>Latitude:</b>{{selectedPlaceData['location']['lat']}}</li>
+            <li><b>Longitude:</b>{{selectedPlaceData['location']['lng']}}</li>
+          </ul>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,34 @@
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<div *ngIf="hotelData">
+  <div>
+    <h2 align="center">Best hotels in {{hotelData[0]['city']}} from {{hotelData[0]['checkinDate']['date']}} to {{hotelData[0]['checkoutDate']['date']}}</h2>
+  </div>
+  <div class="contain">
+    <mat-card class="tile" *ngFor="let data of hotelData">
+      <mat-card-content class="card">
+        <div class="pictureContainer">
+          <img src="{{data['image']}}">
+        </div>
+        <div class="listContainer">
+          <ul>
+            <li><b>Name:</b> {{data['name']}}</li>
+            <li><b>Price:</b></li>
+            <ul class="innerList">
+              <li><b>Booking price:</b>{{data['bookingPrice']['price']}}{{data['bookingPrice']['currency']}}
+              </li>
+              <li><b>SkyScanner price:</b>{{data['skyScannerPrice']['price']}}{{data['skyScannerPrice']['currency']}}</li>
+            </ul>
+            <li><b>Address: </b> {{data['bookingAddress']['postal_code']}}, {{data['bookingAddress']['city']}}
+              , {{data['bookingAddress']['line_1']}}</li>
+            <li><b>Stars:</b> {{data['stars']['rating']}}</li>
+            <li><b>Rating:</b> {{data['ratings']['value']}}</li>
+          </ul>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<app-places-details *ngIf="hotelData" [locationInput]="locationInput"></app-places-details>

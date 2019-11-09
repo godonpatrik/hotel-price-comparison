@@ -1,0 +1,50 @@
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile {
+  margin: 8px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.selectedContainer {
+  display: flex;
+}
+
+.pictureContainer {
+  float: left;
+}
+
+.descContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 28px 0 28px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .pictureContainer {
+    justify-items: center;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  ul {
+    margin-block-start: auto;
+    display: block;
+    margin: auto;
+  }
+}

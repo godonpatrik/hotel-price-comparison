@@ -1,0 +1,25 @@
+<div class="container" *ngIf="!showWeatherDetails">
+  <mat-card class="card">
+    <form [formGroup]="weatherForm" (ngSubmit)="onSubmit(location.value, days.value)">
+      <mat-card-title class="cardTitle">Weather</mat-card-title>
+      <mat-form-field>
+        <input matInput #location placeholder="Location" formControlName="location" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput #days placeholder="Days(max is 17)" type="number" formControlName="days" required>
+      </mat-form-field>
+      <button class="loginRegisterButton" mat-flat-button type="submit" color="primary" [disabled]="!weatherForm.valid">
+        Show weather forecast
+      </button>
+    </form>
+  </mat-card>
+</div>
+
+<app-weather-details *ngIf="showWeatherDetails" [locationInput]="locationOutput"
+                     [daysInput]="daysOutput" (errorGettingData)="handleError($event)"></app-weather-details>
+
+<div *ngIf="showWeatherDetails" class="backButtonContainer">
+  <button class="backButton" mat-flat-button color="primary" type="button" (click)="hideWeatherDetails()">Back to form</button>
+</div>
+
+

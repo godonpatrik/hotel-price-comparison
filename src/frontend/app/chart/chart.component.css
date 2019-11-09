@@ -1,0 +1,10 @@
+.chartCard {
+  margin: 8px;
+  width: 90%;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
