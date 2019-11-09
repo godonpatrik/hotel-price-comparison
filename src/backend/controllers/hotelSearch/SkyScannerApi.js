@@ -87,7 +87,7 @@ const fakeResponseData = [{
       },
       {
         "stars": "5",
-        "reviews_count": 56,
+        "reviews_count": 656,
         "amenities": [
           "Lift",
           "Laundry",
@@ -123,7 +123,7 @@ const fakeResponseData = [{
       },
       {
         "stars": "3",
-        "reviews_count": 59,
+        "reviews_count": 590,
         "amenities": [
           "Laundry",
         ],
@@ -227,7 +227,7 @@ const fakeResponseData = [{
       },
       {
         "stars": "3",
-        "reviews_count": 23,
+        "reviews_count": 421,
         "amenities": [
           "Laundry",
         ],
@@ -368,7 +368,7 @@ const fakeResponseData = [{
       },
       {
         "stars": "4",
-        "reviews_count": 132,
+        "reviews_count": 854,
         "amenities": [
           "Laundry",
         ],
@@ -402,7 +402,7 @@ const fakeResponseData = [{
       },
       {
         "stars": "3",
-        "reviews_count": 132,
+        "reviews_count": 265,
         "amenities": [
           "Laundry",
         ],
@@ -436,7 +436,7 @@ const fakeResponseData = [{
       },
       {
         "stars": "3",
-        "reviews_count": 132,
+        "reviews_count": 216,
         "amenities": [
           "Laundry",
         ],
@@ -468,12 +468,46 @@ const fakeResponseData = [{
           },
         ],
       },
+      {
+        "stars": "3",
+        "reviews_count": 192,
+        "amenities": [
+          "Laundry",
+        ],
+        "property_type": "Hotel",
+        "rating": {
+          "desc": "rating_satisfactory",
+          "value": 8.5
+        },
+        "name": "Budapest Museum Central",
+        "hotel_id": "45533941",
+        "postal_code": 1053,
+        "address": "Múzeum körút 39",
+        "offers": [
+          {
+            "partner_id": "h_hc",
+            "price": 412,
+            "currency": "usd",
+            "available": null,
+            "strike_through": null,
+            "meal_plan": "breakfast_included",
+            "is_official": true,
+            "closed_user_groups": null,
+            "dbook_link": null,
+            "room_type": [
+              "double_room",
+            ],
+            "cancellation_text": null,
+            "cancellation": "non_refundable"
+          },
+        ],
+      },
     ],
     "price_includes": [
       "vat",
       "other_taxes"
     ],
-    "average_min_price": 24.84,
+    "average_min_price": 528.5,
   }
 
 }];

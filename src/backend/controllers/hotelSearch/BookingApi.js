@@ -566,6 +566,50 @@ const fakeResponseData = [{
         "airport_code": "BUD"
       }
     }
+  },
+  "10013": {
+    "property_id": "10013",
+    "name": "LOFT Astoria",
+    "address": {
+      "line_1": "Múzeum körút 1/b",
+      "city": "Budapest",
+      "state_province_name": "Budapest",
+      "postal_code": "1050",
+      "country_code": "HU",
+    },
+    "ratings": {
+      "rating": "4",
+      "type": "Star"
+    },
+    "checkin": {
+      "begin_time": "3:00 PM",
+      "end_time": "11:00 PM",
+      "min_age": 18
+    },
+    "checkout": {
+      "time": "11:00 AM"
+    },
+    "checkin_date": {
+      "date": "2020-06-04"
+    },
+    "checkout_date": {
+      "date": "2020-06-09"
+    },
+    "price": {
+      "price": "970",
+      "currency": "$"
+    },
+    "image": {
+      "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/161861055.webp?k=d9880f9d3a354ad97f85013473fac9c6b182127c4782869a1d33f7dbe588410f&o="
+    },
+    "redirectUrl": {
+      "url": "https://www.booking.com/hotel/hu/loft-astoria.en-gb.html?label=gen173nr-1FCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQHoAQH4AQuIAgGoAgO4AsXynO4FwAIB&sid=d2fc487a65919340796334091427a00d&all_sr_blocks=275016401_106584636_2_0_0&checkin=2020-06-04&checkout=2020-06-09&dest_id=-850553&dest_type=city&group_adults=2&group_children=0&hapos=1&highlighted_blocks=275016401_106584636_2_0_0&hpos=1&no_rooms=1&sr_order=popularity&srepoch=1573337524&srpvid=db809c19a3c70041&ucfs=1&from=searchresults;highlight_room=&tpi_r=2#hotelTmpl"
+    },
+    "airports": {
+      "preferred": {
+        "airport_code": "BUD"
+      }
+    }
   }
 }];
 
