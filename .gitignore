@@ -22,9 +22,6 @@ speed-measure-plugin.json
 .idea
 .idea/**
 
-# package-lock.json
-package-lock.json
-
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
