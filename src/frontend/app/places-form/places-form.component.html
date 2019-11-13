@@ -3,7 +3,7 @@
     <form [formGroup]="placesForm" (ngSubmit)="onSubmit(location.value)">
       <mat-card-title class="cardTitle">Recommended places</mat-card-title>
       <mat-form-field>
-        <input matInput #location placeholder="Location" formControlName="location" required>
+        <input matInput #location placeholder="Location" formControlName="location" required pattern="^[A-Za-z]+$">
         <mat-error *ngIf="location.required">Enter valid location!</mat-error>
       </mat-form-field>
       <button class="loginRegisterButton" mat-flat-button type="submit" color="primary" [disabled]="!placesForm.valid">

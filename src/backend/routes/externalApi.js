@@ -17,7 +17,7 @@ router.get('/:city/:days/weather', (req, res) => {
       res.send(apiResponse.data);
     })
     .catch(error => {
-      res.send({status: error.response.status, text: error.res.statusText});
+      res.send({status: error.response.status, text: error.response.statusText});
     })
 });
 
@@ -30,7 +30,8 @@ router.get('/:city/getPlaces', (req, res) => {
       res.send(apiResponse.data);
     })
     .catch(error => {
-      res.send({status: error.response.status, text: error.res.statusText});
+      console.log(error);
+      res.send({status: error.response.status, text: error.response.statusText});
     })
 });
 
@@ -43,7 +44,7 @@ router.get('/:id/getPlaceDetails', (req, res) => {
       res.send(apiResponse.data);
     })
     .catch(error => {
-      res.send({status: error.response.status, text: error.res.statusText});
+      res.send({status: error.response.status, text: error.response.statusText});
     })
 });
 
@@ -54,7 +55,7 @@ router.get('/getExchangeRate', (req, res) => {
       res.send(apiResponse.data);
     })
     .catch(error => {
-      res.send({status: error.response.status, text: error.res.statusText});
+      res.send({status: error.response.status, text: error.response.statusText});
     })
 });
 
