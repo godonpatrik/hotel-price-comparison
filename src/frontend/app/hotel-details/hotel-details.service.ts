@@ -10,6 +10,6 @@ export class HotelDetailsService {
   }
 
   getHotels(city, checkin_date, checkout_date, peopleNum) {
-    return this.http.get(`http://localhost:3000/api/userSearch/${city}/${checkin_date}/${checkout_date}/${peopleNum}/getHotels`);
+    return this.http.get(`http://localhost:3000/api/hotelSearch/${city}/${checkin_date}/${checkout_date}/${peopleNum}/getHotels`);
   }
 }

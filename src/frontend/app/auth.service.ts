@@ -26,21 +26,19 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    return this.http
-      .post('http://localhost:3000/api/auth/login', {
-        username: username,
-        password: password
+    return this.http.post('http://localhost:3000/api/auth/login', {
+      username: username,
+      password: password
+    }).pipe(
+      map((user: User) => {
+        if (user && user['token']) {
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          this.currentUserSubject.next(user);
+          this.router.navigate(['/homepage']);
+        }
+        return user;
       })
-      .pipe(
-        map((user: User) => {
-          if (user && user['token']) {
-            localStorage.setItem('currentUser', JSON.stringify(user));
-            this.currentUserSubject.next(user);
-            this.router.navigate(['/homepage']);
-          }
-          return user;
-        })
-      );
+    );
   }
 
   logout() {
@@ -48,14 +46,22 @@ export class AuthService {
     this.currentUserSubject.next(null);
   }
 
-  register(userName: string, password: string, email: string) {
+  register(username: string, password: string, email: string) {
     const body = {
-      username: userName,
+      username: username,
       password: password,
       email: email
     };
-    return this.http
-      .post('http://localhost:3000/api/user/register', body)
-      .toPromise();
+    return this.http.post('http://localhost:3000/api/user/register', body).toPromise();
+  }
+
+  updateUser(prevUserName: string, newUsername: string, password: string, email: string) {
+    const body = {
+      prevUserName: prevUserName,
+      username: newUsername,
+      password: password,
+      email: email
+    };
+    return this.http.post('http://localhost:3000/api/user/update', body).toPromise();
   }
 }

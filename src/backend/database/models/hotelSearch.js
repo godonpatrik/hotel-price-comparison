@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  const userSearch = sequelize.define('userSearch', {
+  const hotelSearch = sequelize.define('hotelSearch', {
     id: {
       allowNull: false,
       type: DataTypes.UUID,
@@ -29,9 +29,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {});
 
-  userSearch.associate = function (models) {
-    userSearch.belongsTo(models.user);
+  hotelSearch.associate = function (models) {
+    hotelSearch.belongsTo(models.user);
   };
 
-  return userSearch;
+  return hotelSearch;
 };

@@ -16,7 +16,7 @@ export class TokenInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const ownProtectedUrl = request.url.includes('userSearch') || request.url.includes('externalApi');
+    const ownProtectedUrl = request.url.includes('hotelSearch') || request.url.includes('placeSearch') || request.url.includes('weatherSearch') || request.url.includes('externalApi');
 
     if (ownProtectedUrl) {
       request = request.clone({

@@ -38,6 +38,7 @@ import {PlacesDetailsComponent} from './places-details/places-details.component'
 import {HotelDetailsComponent} from './hotel-details/hotel-details.component';
 import {TokenInterceptor} from "./token.interceptor";
 import {SelectedPlaceComponent} from './selected-place/selected-place.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {SelectedPlaceComponent} from './selected-place/selected-place.component'
     WeatherDetailsComponent,
     PlacesDetailsComponent,
     HotelDetailsComponent,
-    SelectedPlaceComponent
+    SelectedPlaceComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

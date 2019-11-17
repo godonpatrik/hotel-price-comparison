@@ -1,0 +1,9 @@
+.mat-flat-button {
+  background-color: rgb(18, 109, 140);
+}
+
+.statContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}

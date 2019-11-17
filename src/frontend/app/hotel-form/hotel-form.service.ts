@@ -1,21 +1,18 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {UserSearch} from '../UserSearch';
+import {HotelSearch} from '../HotelSearch';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HotelFormService {
-  private userSearchUrl = 'http://localhost:3000/api/userSearch';
+  private hotelSearchUrl = 'http://localhost:3000/api/hotelSearch';
 
   constructor(private http: HttpClient) {
   }
 
-  addUserSearch(userSearch: UserSearch, userName: string) {
+  addHotelSearch(hotelSearch: HotelSearch, username: string) {
     return this.http
-      .post<UserSearch>(
-        `${this.userSearchUrl}/${userName}/addUserSearch`,
-        userSearch
-      ).toPromise();
+      .post<HotelSearch>(`${this.hotelSearchUrl}/${username}/addHotelSearch`, hotelSearch).toPromise();
   }
 }

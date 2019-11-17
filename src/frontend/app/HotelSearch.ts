@@ -1,6 +1,6 @@
 import {User} from './User';
 
-export class UserSearch {
+export class HotelSearch {
   id: number;
   location: string;
   startDate: Date;

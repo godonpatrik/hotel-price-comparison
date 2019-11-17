@@ -17,4 +17,45 @@ router.post('/register', (req, res) => {
     });
 });
 
+router.post('/update', (req, res) => {
+  const prevUserName = req.body.prevUserName;
+  delete req.body.prevUserName;
+  const body = req.body;
+  body.password = bcrypt.hashSync(req.body.password, 10);
+  models['user']
+    .findOne({
+      where: {
+        username: prevUserName
+      }
+    })
+    .then(user => {
+      const userId = user.id;
+      models['user']
+        .update(body, {
+          where: {
+            id: userId
+          }
+        })
+        .then(updatedUser => {
+          res.send(updatedUser);
+          console.log('User successfully updated!')
+        })
+    })
+});
+
+router.get('/:username/getUser', (req, res) => {
+  const username = req.params.username;
+  models['user']
+    .findOne({
+        where: {
+          username: username
+        }
+      }
+    )
+    .then(user => {
+      res.send(user);
+    })
+
+});
+
 module.exports = router;

@@ -9,7 +9,7 @@ import * as moment from 'moment';
 })
 export class MySearchesComponent implements OnInit {
   private searches: any;
-  private userName = JSON.parse(localStorage.getItem('currentUser')).username;
+  private username = JSON.parse(localStorage.getItem('currentUser')).username;
   private showHotelDetails: boolean;
   private locationOutput: string;
   private startDateOutput: string;
@@ -27,7 +27,7 @@ export class MySearchesComponent implements OnInit {
 
   ngOnInit() {
     this.showHotelDetails = false;
-    this.mySearchesService.getAllUserSearch(this.userName).then(data => {
+    this.mySearchesService.getAllHotelSearch(this.username).then(data => {
       this.searches = data;
       this.searches.forEach(element => {
         element.startDate = moment(element.startDate).format('YYYY-MM-DD');

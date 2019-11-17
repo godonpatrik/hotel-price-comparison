@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import {WeatherFormService} from "./weather-form.service";
+import {WeatherSearch} from "../WeatherSearch";
 
 @Component({
   selector: 'app-weather',
@@ -14,9 +16,9 @@ export class WeatherFormComponent implements OnInit {
   locationOutput: string;
   daysOutput: string;
   showWeatherDetails: boolean;
+  private username = JSON.parse(localStorage.getItem('currentUser')).username;
 
-  constructor(
-    private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private weatherFormService: WeatherFormService) {
   }
 
   hideWeatherDetails() {
@@ -33,9 +35,12 @@ export class WeatherFormComponent implements OnInit {
   }
 
   onSubmit(location: string, days: string) {
-    this.locationOutput = location;
-    this.daysOutput = days;
-    this.showWeatherDetails = true;
+    this.weatherFormService.addWeatherSearch(Object.assign(new WeatherSearch(), this.weatherForm.value), this.username)
+      .then(() => {
+        this.locationOutput = location;
+        this.daysOutput = days;
+        this.showWeatherDetails = true;
+      })
   }
 
 }

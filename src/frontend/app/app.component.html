@@ -1,11 +1,12 @@
 <mat-toolbar>
   <span class="floatLeft" fxShow.gt-sm></span>
-  <div fxLayout="row" class="desktop" *ngIf="authService.isLoggedIn()">
+  <div fxLayout="row wrap" class="desktop" *ngIf="authService.isLoggedIn()">
     <button mat-button routerLink="/homepage">Homepage</button>
     <button mat-button routerLink="/hotelForm">Hotel Search</button>
     <button mat-button routerLink="/weatherForm">Weather</button>
     <button mat-button routerLink="/placesForm">Places</button>
-    <button mat-button routerLink="/mySearches">My Searches</button>
+    <button mat-button routerLink="/mySearches">My Hotel Searches</button>
+    <button mat-button routerLink="/aboutMe">About me</button>
     <button mat-button (click)="logout()">Logout</button>
   </div>
   <div fxLayout="row" class="desktop" *ngIf="!authService.isLoggedIn()">
@@ -27,7 +28,8 @@
   <button mat-menu-item routerLink="/hotelForm" *ngIf="authService.isLoggedIn()">Hotel Search</button>
   <button mat-menu-item routerLink="/weatherForm" *ngIf="authService.isLoggedIn()">Weather</button>
   <button mat-menu-item routerLink="/placesForm" *ngIf="authService.isLoggedIn()">Places</button>
-  <button mat-menu-item routerLink="/mySearches" *ngIf="authService.isLoggedIn()">My Searches</button>
+  <button mat-menu-item routerLink="/mySearches" *ngIf="authService.isLoggedIn()">My Hotel Searches</button>
+  <button mat-menu-item routerLink="/aboutMe" *ngIf="authService.isLoggedIn()">About me</button>
   <button mat-menu-item (click)="logout()" *ngIf="authService.isLoggedIn()">Logout</button>
   <button mat-menu-item routerLink="login" *ngIf="!authService.isLoggedIn()">Login</button>
   <button mat-menu-item routerLink="register" *ngIf="!authService.isLoggedIn()">Register</button>

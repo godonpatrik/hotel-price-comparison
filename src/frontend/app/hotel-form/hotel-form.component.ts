@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 import {HotelFormService} from './hotel-form.service';
-import {UserSearch} from '../UserSearch';
+import {HotelSearch} from '../HotelSearch';
 import {take} from "rxjs/operators";
 
 @Component({
@@ -25,7 +25,7 @@ export class HotelFormComponent implements OnInit {
   todayDate: any;
   minEndDate: any;
 
-  private userName = JSON.parse(localStorage.getItem('currentUser')).username;
+  private username = JSON.parse(localStorage.getItem('currentUser')).username;
 
   constructor(
     private fb: FormBuilder,
@@ -52,7 +52,7 @@ export class HotelFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.hotelFormService.addUserSearch(Object.assign(new UserSearch(), this.hotelForm.value), this.userName)
+    this.hotelFormService.addHotelSearch(Object.assign(new HotelSearch(), this.hotelForm.value), this.username)
       .then(() => {
         this.locationOutput = this.hotelForm.value.location;
         this.startDateOutput = this.hotelForm.value.startDate;

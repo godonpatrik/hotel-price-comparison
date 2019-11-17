@@ -8,7 +8,7 @@ const PORT = 3000;
 
 app.use(cors());
 
-database.authenticate()
+database.sync()
   .then(() => {
     console.log('Connection has been established successfully.');
   })

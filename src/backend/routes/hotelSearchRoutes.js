@@ -4,22 +4,22 @@ const models = require('../database/models/index');
 const token = require('jsonwebtoken');
 const hotelSearchController = require('../controllers/hotelSearchController');
 
-router.post('/:userName/addUserSearch', ensureToken, (req, res) => {
+router.post('/:username/addHotelSearch', ensureToken, (req, res) => {
   const body = req.body;
-  const userName = req.params['userName'];
+  const username = req.params['username'];
   models['user']
     .findOne({
       where: {
-        username: userName
+        username: username
       }
     })
     .then(user => {
       body.userId = user.id;
-      models['userSearch']
+      models['hotelSearch']
         .create(body)
-        .then(userSearch => {
-          res.send(userSearch);
-          console.log('UserSearch successfully added to database, data: ', userSearch.toJSON());
+        .then(hotelSearch => {
+          res.send(hotelSearch);
+          console.log('HotelSearch successfully added to database, data: ', hotelSearch.toJSON());
         })
     })
 });
@@ -35,16 +35,16 @@ router.get('/:city/:checkin_date/:checkout_date/:peopleNum/getHotels', ensureTok
     });
 });
 
-router.get('/:userName/getAllByUser', ensureToken, (req, res) => {
-  const userName = req.params['userName'];
+router.get('/:username/getAllByUser', ensureToken, (req, res) => {
+  const username = req.params['username'];
   models['user']
     .findOne({
       where: {
-        username: userName
+        username: username
       }
     })
     .then(user => {
-      models['userSearch']
+      models['hotelSearch']
         .findAll({
           where: {
             userId: user.id
@@ -53,8 +53,8 @@ router.get('/:userName/getAllByUser', ensureToken, (req, res) => {
             all: true, nested: true
           }]
         })
-        .then(userSearches => {
-          res.send(userSearches);
+        .then(hotelSearches => {
+          res.send(hotelSearches);
         })
     })
 });

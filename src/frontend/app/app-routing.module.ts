@@ -9,6 +9,7 @@ import {MySearchesComponent} from './my-searches/my-searches.component';
 import {PlacesFormComponent} from './places-form/places-form.component';
 
 import {AuthGuard} from './auth.guard';
+import {AboutMeComponent} from "./about-me/about-me.component";
 
 const routes: Routes = [
   {
@@ -45,6 +46,11 @@ const routes: Routes = [
   {
     path: 'mySearches',
     component: MySearchesComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'aboutMe',
+    component: AboutMeComponent,
     canActivate: [AuthGuard]
   },
   {path: '**', redirectTo: 'homepage'}

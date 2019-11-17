@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Validators, FormBuilder} from '@angular/forms';
+import {PlacesFormService} from "./places-form.service";
+import {PlaceSearch} from "../PlaceSearch";
 
 @Component({
   selector: 'app-venues',
@@ -14,8 +16,9 @@ export class PlacesFormComponent implements OnInit {
 
   private showPlacesDetails: boolean;
   private locationOutput: string;
+  private username = JSON.parse(localStorage.getItem('currentUser')).username;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private placesFormService: PlacesFormService) {
   }
 
   ngOnInit() {
@@ -28,8 +31,12 @@ export class PlacesFormComponent implements OnInit {
   }
 
   onSubmit(location: string) {
-    this.locationOutput = location;
-    this.showPlacesDetails = true;
+    this.placesFormService.addPlaceSearch(Object.assign(new PlaceSearch(), this.placesForm.value), this.username)
+      .then(() => {
+        this.locationOutput = location;
+        this.showPlacesDetails = true;
+      });
+
   }
 
   hidePlaceDetails() {
