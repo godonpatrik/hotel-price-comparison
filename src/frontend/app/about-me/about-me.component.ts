@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, Validators} from "@angular/forms";
 import {AboutMeService} from "./about-me.service";
-import {take} from "rxjs/operators";
 import {AuthService} from "../auth.service";
 import {ToastrService} from "ngx-toastr";
 import {Router} from "@angular/router";
