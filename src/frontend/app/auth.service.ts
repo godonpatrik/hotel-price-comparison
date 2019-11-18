@@ -52,7 +52,7 @@ export class AuthService {
       password: password,
       email: email
     };
-    return this.http.post('http://localhost:3000/api/user/register', body).toPromise();
+    return this.http.post('http://localhost:3000/api/auth/register', body).toPromise();
   }
 
   updateUser(prevUserName: string, newUsername: string, password: string, email: string) {

@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const models = require('../database/models/index');
-const token = require('jsonwebtoken');
 const hotelSearchController = require('../controllers/hotelSearchController');
 
-router.post('/:username/addHotelSearch', ensureToken, (req, res) => {
+router.post('/:username/addHotelSearch', (req, res) => {
   const body = req.body;
   const username = req.params['username'];
   models['user']
@@ -24,18 +23,18 @@ router.post('/:username/addHotelSearch', ensureToken, (req, res) => {
     })
 });
 
-router.get('/:city/:checkin_date/:checkout_date/:peopleNum/getHotels', ensureToken, (req, res) => {
+router.get('/:city/:checkin_date/:checkout_date/:peopleNum/getHotels', (req, res) => {
   const city = req.params.city;
   const checkin_date = req.params.checkin_date;
   const checkout_date = req.params.checkout_date;
   const adults = req.params.peopleNum;
-  hotelSearchController.getHotelData(city, checkin_date,checkout_date,adults)
+  hotelSearchController.getHotelData(city, checkin_date, checkout_date, adults)
     .then(data => {
       res.send(data);
     });
 });
 
-router.get('/:username/getAllByUser', ensureToken, (req, res) => {
+router.get('/:username/getAllByUser', (req, res) => {
   const username = req.params['username'];
   models['user']
     .findOne({
@@ -58,27 +57,5 @@ router.get('/:username/getAllByUser', ensureToken, (req, res) => {
         })
     })
 });
-
-function ensureToken(req, res, next) {
-  const bearerHeader = req.headers['authorization'];
-  if (bearerHeader) {
-    const bearer = bearerHeader.split(' ');
-    const bearerToken = bearer[1];
-    if (bearerToken) {
-      token.verify(bearerToken, 'jsonWebTokenSecret', (error, data) => {
-        if (error) {
-          console.log('Error occurred: ' + error);
-          res.sendStatus(403);
-        } else {
-          req.data = data;
-          next();
-        }
-      })
-    }
-  } else {
-    console.log('No authorization header');
-    res.sendStatus(403);
-  }
-}
 
 module.exports = router;
