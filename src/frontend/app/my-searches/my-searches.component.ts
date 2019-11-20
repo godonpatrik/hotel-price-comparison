@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MySearchesService} from './my-searches.service';
 import * as moment from 'moment';
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-my-searches',
@@ -22,7 +23,7 @@ export class MySearchesComponent implements OnInit {
     widths: [22.5, 22.5, 22.5, 22.5]
   };
 
-  constructor(private mySearchesService: MySearchesService) {
+  constructor(private mySearchesService: MySearchesService, private toastrService: ToastrService) {
   }
 
   ngOnInit() {
@@ -41,10 +42,14 @@ export class MySearchesComponent implements OnInit {
   }
 
   showHotels(element) {
-    this.locationOutput = element.location;
-    this.startDateOutput = element.startDate;
-    this.endDateOutput = element.endDate;
-    this.peopleNumOutput = element.peopleNum;
-    this.showHotelDetails = true;
+    if (moment(element.startDate).isAfter(new Date())) {
+      this.locationOutput = element.location;
+      this.startDateOutput = element.startDate;
+      this.endDateOutput = element.endDate;
+      this.peopleNumOutput = element.peopleNum;
+      this.showHotelDetails = true;
+    } else {
+      this.toastrService.error('Start date is before today!');
+    }
   }
 }
