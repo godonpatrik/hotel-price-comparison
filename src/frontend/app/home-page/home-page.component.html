@@ -1,7 +1,7 @@
 <div class="rates" *ngIf="rates">
   Today is {{day}} <br>
   {{ time | date: 'hh:mm:ss a' }} <br>
-  {{rates['base']}} {{rates['rates']['HUF']}} HUF
+  {{rates['base']}} {{rates['rates']['HUF'] | number: '1.2-2'}} HUF
 </div>
 <div class="container">
   <span>

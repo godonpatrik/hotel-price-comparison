@@ -49,7 +49,7 @@ router.get('/:id/getPlaceDetails', (req, res) => {
 });
 
 router.get('/getExchangeRate', (req, res) => {
-  const url = 'https://api.ratesapi.io/api/latest?symbols=HUF';
+  const url = 'https://api.ratesapi.io/api/latest?base=USD';
   axios.get(url)
     .then(apiResponse => {
       res.send(apiResponse.data);
