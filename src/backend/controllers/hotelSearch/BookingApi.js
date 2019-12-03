@@ -74,9 +74,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/139074134.webp?k=127904dc9db18f0ce416fd52ed6580bbbcfd94394fdcb89b85f2fed180afc9e3&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/papillon.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=7527207_93706296_0_1_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=7527207_93706296_0_1_0;hpos=1;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -117,9 +114,6 @@ const fakeResponseData = [{
     },
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/223995010.webp?k=426c6247a9bbfe6278d81db77dad2e36c0b3013eebe6a2806240884eb644708e&o="
-    },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/ic-budapest.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=7545404_94289044_0_2_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=2;highlighted_blocks=7545404_94289044_0_2_0;hpos=2;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
     },
     "airports": {
       "preferred": {
@@ -162,9 +156,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/206928974.webp?k=eaf79ea76e5833c14b38d17cddc1881b6b61f99b665c38fd4541b5c425e7920e&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/vagabond-apartments-amp-suites.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB&sid=d2fc487a65919340796334091427a00d&all_sr_blocks=206390101_95127673_2_0_0&checkin=2020-06-04&checkout=2020-06-09&dest_id=-850553&dest_type=city&group_adults=2&group_children=0&hapos=3&highlighted_blocks=206390101_95127673_2_0_0&hpos=3&no_rooms=1&sr_order=popularity&srepoch=1573036990&srpvid=f4964b5fbedb0173&ucfs=1&from=searchresults&tpi_r=2#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -205,9 +196,6 @@ const fakeResponseData = [{
     },
     "image": {
       "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/33547697.webp?k=1eeca3fcea5bb7926b3c069de526f248a696d8fec4d0df703d6c00f43e554d4c&o="
-    },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/avenue-hostel.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB&sid=d2fc487a65919340796334091427a00d&all_sr_blocks=109779525_94822155_2_1_0&checkin=2020-06-04&checkout=2020-06-09&dest_id=-850553&dest_type=city&group_adults=2&group_children=0&hapos=5&highlighted_blocks=109779525_94822155_2_1_0&hpos=5&no_rooms=1&sr_order=popularity&srepoch=1573036990&srpvid=f4964b5fbedb0173&ucfs=1&from=searchresults&tpi_r=2#hotelTmpl"
     },
     "airports": {
       "preferred": {
@@ -250,9 +238,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/87035431.webp?k=f8a3361a4f16a3b5ff8a83d1a9d2253e742ee01e6645822ddedfaf0fef8448ce&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/budapest-holidays-harmony.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=152766407_101858806_0_0_0;bhgwe_cep=1;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=6;highlighted_blocks=152766407_101858806_0_0_0;hpos=6;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -293,9 +278,6 @@ const fakeResponseData = [{
     },
     "image": {
       "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/118354287.webp?k=0d9092fbaaaa925f201db232537b1498b80ec05cb96f8da902fdac2090c9f5cb&o="
-    },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/anva-house.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=219400704_101121941_2_0_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=7;highlighted_blocks=219400704_101121941_2_0_0;hpos=7;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
     },
     "airports": {
       "preferred": {
@@ -338,9 +320,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/40818822.webp?k=964371b821290a15e323334946f5eddf64d630c35636fb849598dbbe7aa5dd5f&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/bellevue-budapest-b-amp-b.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB&sid=d2fc487a65919340796334091427a00d&all_sr_blocks=128136907_218122020_0_1_0&checkin=2020-06-04&checkout=2020-06-09&dest_id=-850553&dest_type=city&group_adults=2&group_children=0&hapos=8&highlighted_blocks=128136907_218122020_0_1_0&hpos=8&no_rooms=1&sr_order=popularity&srepoch=1573036990&srpvid=f4964b5fbedb0173&ucfs=1&from=searchresults&tpi_r=2#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -381,9 +360,6 @@ const fakeResponseData = [{
     },
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/189101409.webp?k=90c208dc747d45f10e7094edf4e29f5a6fdf6f2f47e73c2e3b253f14d8743a41&o="
-    },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/metro.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=18524201_89065861_0_2_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=24;highlighted_blocks=18524201_89065861_0_2_0;hpos=24;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
     },
     "airports": {
       "preferred": {
@@ -426,9 +402,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/159139703.webp?k=6b9248aa9cfe8f69a7fd6aee83e4c04d9bb27243d133064a788f8b1f1d496607&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/central-dominik-pension.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=7520801_206204096_0_1_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=25;highlighted_blocks=7520801_206204096_0_1_0;hpos=25;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -469,9 +442,6 @@ const fakeResponseData = [{
     },
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/167834297.webp?k=856e2fdac2f4a3411f40a6ba61c6da5ff815eea8cd6e292a5d934a50607027f8&o="
-    },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/goldenpark.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=7513324_119876568_0_2_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=28;highlighted_blocks=7513324_119876568_0_2_0;hpos=28;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
     },
     "airports": {
       "preferred": {
@@ -514,9 +484,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://r-cf.bstatic.com/xdata/images/hotel/square200/85581853.webp?k=b6766737c7319058918bac4ab2610df24c22ac9b11bd813ae909793b7b52d026&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/sous44.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=194815102_206260201_2_2_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=31;highlighted_blocks=194815102_206260201_2_2_0;hpos=31;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -558,9 +525,6 @@ const fakeResponseData = [{
     "image": {
       "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/50505297.webp?k=d1efd67f6ae379df361f64c47761b8e5a3b080e86b45fc2809d26c2290eab1ce&o="
     },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/atlashotelbudapest.en-gb.html?label=gen173nr-1DCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQPoAQGIAgGoAgO4AuXDiu4FwAIB;sid=d2fc487a65919340796334091427a00d;all_sr_blocks=7517223_93706251_0_1_0;checkin=2020-06-04;checkout=2020-06-09;dest_id=-850553;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=32;highlighted_blocks=7517223_93706251_0_1_0;hpos=32;no_rooms=1;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1573036990;srpvid=f4964b5fbedb0173;type=total;ucfs=1&#hotelTmpl"
-    },
     "airports": {
       "preferred": {
         "airport_code": "BUD"
@@ -601,9 +565,6 @@ const fakeResponseData = [{
     },
     "image": {
       "url": "https://q-cf.bstatic.com/xdata/images/hotel/square200/161861055.webp?k=d9880f9d3a354ad97f85013473fac9c6b182127c4782869a1d33f7dbe588410f&o="
-    },
-    "redirectUrl": {
-      "url": "https://www.booking.com/hotel/hu/loft-astoria.en-gb.html?label=gen173nr-1FCAEoggI46AdIM1gEaGeIAQGYAQm4ARfIAQzYAQHoAQH4AQuIAgGoAgO4AsXynO4FwAIB&sid=d2fc487a65919340796334091427a00d&all_sr_blocks=275016401_106584636_2_0_0&checkin=2020-06-04&checkout=2020-06-09&dest_id=-850553&dest_type=city&group_adults=2&group_children=0&hapos=1&highlighted_blocks=275016401_106584636_2_0_0&hpos=1&no_rooms=1&sr_order=popularity&srepoch=1573337524&srpvid=db809c19a3c70041&ucfs=1&from=searchresults;highlight_room=&tpi_r=2#hotelTmpl"
     },
     "airports": {
       "preferred": {
