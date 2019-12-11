@@ -32,3 +32,5 @@
 </div>
 
 <app-places-details *ngIf="hotelData" [locationInput]="locationInput"></app-places-details>
+
+<app-weather-details *ngIf="hotelData && showWeather" [locationInput]="locationInput" [daysInput]="maxWeatherDays"></app-weather-details>

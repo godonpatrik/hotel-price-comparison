@@ -3,6 +3,7 @@ import {HotelDetailsService} from "./hotel-details.service";
 import {take} from "rxjs/operators";
 import {NgxSpinnerService} from "ngx-spinner";
 import {ToastrService} from "ngx-toastr";
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-hotel-details',
@@ -15,6 +16,8 @@ export class HotelDetailsComponent implements OnInit {
   @Input() endDateInput: any;
   @Input() peopleNumInput: any;
   private hotelData: any;
+  private showWeather: boolean;
+  private maxWeatherDays = 17;
 
   constructor(private hotelDetailsService: HotelDetailsService,
               private spinnerService: NgxSpinnerService,
@@ -29,6 +32,7 @@ export class HotelDetailsComponent implements OnInit {
         this.spinnerService.hide();
         this.toastrService.success('Success!');
         this.hotelData = response;
+        this.showWeather = this.maxWeatherDays > moment(this.startDateInput).diff(moment(), 'days') + 1;
       })
   }
 
