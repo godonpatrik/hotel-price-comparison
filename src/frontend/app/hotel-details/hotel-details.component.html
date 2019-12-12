@@ -16,9 +16,9 @@
             <li><b>Name:</b> {{data['name']}}</li>
             <li><b>Price:</b></li>
             <ul class="innerList">
-              <li><b>Booking price:</b>{{data['bookingPrice']['price']}}{{data['bookingPrice']['currency']}}
+              <li><b><a target="_blank" rel="noopener noreferrer" href="https://www.booking.com">Booking</a> price:</b>{{data['bookingPrice']['price']}}{{data['bookingPrice']['currency']}}
               </li>
-              <li><b>SkyScanner price:</b>{{data['skyScannerPrice']['price']}}{{data['skyScannerPrice']['currency']}}</li>
+              <li><b><a target="_blank" rel="noopener noreferrer" href="https://www.skyscanner.com">SkyScanner</a> price:</b>{{data['skyScannerPrice']['price']}}{{data['skyScannerPrice']['currency']}}</li>
             </ul>
             <li><b>Address: </b> {{data['bookingAddress']['postal_code']}}, {{data['bookingAddress']['city']}}
               , {{data['bookingAddress']['line_1']}}</li>
